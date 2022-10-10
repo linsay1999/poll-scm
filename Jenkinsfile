@@ -2,9 +2,7 @@ properties([pipelineTriggers([githubPush()])])
  
 pipeline {
     /* specify nodes for executing */
-    agent {
-        label 'aws-node'
-    }
+    agent any
  
     stages {
         /* checkout repo */
@@ -12,7 +10,7 @@ pipeline {
             steps {
                 checkout([
                  $class: 'GitSCM',
-                 branches: [[name: 'master']],
+                 branches: [[name: 'main']],
                  userRemoteConfigs: [[
                     url: 'git@github.com:linsay1999/poll-scm.git',
                     credentialsId: '',
