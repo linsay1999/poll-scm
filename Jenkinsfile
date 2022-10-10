@@ -12,7 +12,7 @@ pipeline {
                  $class: 'GitSCM',
                  branches: [[name: 'main']],
                  userRemoteConfigs: [[
-                    url: 'git@github.com:linsay1999/poll-scm.git',
+                    url: 'https://github.com/linsay1999/poll-scm.git',
                     credentialsId: '',
                  ]]
                 ])
