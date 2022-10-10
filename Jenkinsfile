@@ -3,7 +3,7 @@ properties([pipelineTriggers([githubPush()])])
 pipeline {
     /* specify nodes for executing */
     agent {
-        label 'node-jenkins'
+        label 'aws-node'
     }
  
     stages {
